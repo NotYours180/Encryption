@@ -16,7 +16,7 @@ namespace Encryption
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TritemiusForm());
+            Application.Run(new EncryptionMethodForm());
         }
     }
 }

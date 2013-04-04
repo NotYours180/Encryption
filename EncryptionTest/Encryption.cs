@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text;
 using System.Windows.Forms;
 using ELW.Library.Math;
 using ELW.Library.Math.Exceptions;
@@ -13,10 +14,13 @@ namespace Encryption
     {
         public string Input;
         public char[] ArrInput;
-        public string Key;
+        public byte[] BArrInput;
+        public virtual string Key { get; set; }
+
         public char[] ChrKey;
         public int[] IntKey;
         public Language InputLang;
+        public string InputUri;
         public Language KeyLang;
         public int LetterCount;
         protected CompiledExpression CompiledExpression;
@@ -32,11 +36,16 @@ namespace Encryption
         public Encryption(string input, string key)
         { 
             Input = input;
+            BArrInput = Encoding.UTF8.GetBytes(input);
             ArrInput = input.ToArray();
-            Key = key;
-            ChrKey = key.ToArray();
             InputLang = GetLanguage(ArrInput);
-            KeyLang = GetLanguage(ChrKey);
+            if (key != null)
+            {
+                Key = key;
+                //KeyLang = GetLanguage(ChrKey);
+                ChrKey = key.ToArray();
+            }
+
             switch(InputLang)
             {
                 case Language.English: LetterCount=26;

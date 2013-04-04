@@ -59,5 +59,32 @@ namespace Encryption.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Текстовые файлы (*.txt)|*.txt|Все файлы (*.*)|*.*.
+        /// </summary>
+        internal static string resOP {
+            get {
+                return ResourceManager.GetString("resOP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Key File|*.key.
+        /// </summary>
+        internal static string resOPKey {
+            get {
+                return ResourceManager.GetString("resOPKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Текстовые файлы (*.txt)|*.txt|Все файлы (*.*)|*.*.
+        /// </summary>
+        internal static string resOPTxt {
+            get {
+                return ResourceManager.GetString("resOPTxt", resourceCulture);
+            }
+        }
     }
 }

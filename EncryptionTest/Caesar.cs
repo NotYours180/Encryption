@@ -11,7 +11,7 @@ namespace Encryption
         public override string Encrypt()
         {
             _outputText = ""; 
-            foreach (char t in ArrInput)
+            foreach (var t in ArrInput)
             {
                 _outputText += Convert.ToChar(Convert.ToInt32(t) + Convert.ToInt32(Key));
             }

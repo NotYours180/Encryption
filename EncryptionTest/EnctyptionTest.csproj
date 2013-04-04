@@ -51,6 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm.Designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Caesar.cs" />
     <Compile Include="CaesarForm.cs">
       <SubType>Form</SubType>
@@ -58,7 +64,20 @@
     <Compile Include="CaesarForm.Designer.cs">
       <DependentUpon>CaesarForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DES.cs" />
+    <Compile Include="DesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DesForm.Designer.cs">
+      <DependentUpon>DesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Encryption.cs" />
+    <Compile Include="EncryptionMethodForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EncryptionMethodForm.Designer.cs">
+      <DependentUpon>EncryptionMethodForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Gamma.cs" />
     <Compile Include="GammaForm.cs">
       <SubType>Form</SubType>
@@ -75,8 +94,17 @@
     <Compile Include="TritemiusForm.Designer.cs">
       <DependentUpon>TritemiusForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CaesarForm.resx">
       <DependentUpon>CaesarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DesForm.resx">
+      <DependentUpon>DesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EncryptionMethodForm.resx">
+      <DependentUpon>EncryptionMethodForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GammaForm.resx">
       <DependentUpon>GammaForm.cs</DependentUpon>
@@ -94,6 +122,7 @@
     <EmbeddedResource Include="TritemiusForm.resx">
       <DependentUpon>TritemiusForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
